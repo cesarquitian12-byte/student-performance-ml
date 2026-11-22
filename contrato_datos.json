@@ -1,0 +1,224 @@
+
+{
+  "nombre": "Contrato de Datos - Student Performance",
+  "version": "1.0",
+  "descripcion": "Define la estructura y las reglas de validacion de los datos de entrada para la inferencia del modelo de riesgo academico.",
+  "dataset": "student-mat.csv",
+  "objetivo": "Clasificar el riesgo academico de un estudiante.",
+  "variable_objetivo": "riesgo_academico",
+  "regla_clasificacion": "G3 < 10: riesgo academico; G3 >= 10: sin riesgo.",
+  "total_variables_entrada": 32,
+  "campos": {
+    "school": {
+      "tipo": "string",
+      "valores_permitidos": ["GP", "MS"]
+    },
+    "sex": {
+      "tipo": "string",
+      "valores_permitidos": ["F", "M"]
+    },
+    "age": {
+      "tipo": "integer",
+      "minimo": 15,
+      "maximo": 22
+    },
+    "address": {
+      "tipo": "string",
+      "valores_permitidos": ["U", "R"]
+    },
+    "famsize": {
+      "tipo": "string",
+      "valores_permitidos": ["LE3", "GT3"]
+    },
+    "Pstatus": {
+      "tipo": "string",
+      "valores_permitidos": ["T", "A"]
+    },
+    "Medu": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 4
+    },
+    "Fedu": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 4
+    },
+    "Mjob": {
+      "tipo": "string",
+      "valores_permitidos": ["teacher", "health", "services", "at_home", "other"]
+    },
+    "Fjob": {
+      "tipo": "string",
+      "valores_permitidos": ["teacher", "health", "services", "at_home", "other"]
+    },
+    "reason": {
+      "tipo": "string",
+      "valores_permitidos": ["home", "reputation", "course", "other"]
+    },
+    "guardian": {
+      "tipo": "string",
+      "valores_permitidos": ["mother", "father", "other"]
+    },
+    "traveltime": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 4
+    },
+    "studytime": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 4
+    },
+    "failures": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 3
+    },
+    "schoolsup": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "famsup": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "paid": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "activities": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "nursery": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "higher": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "internet": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "romantic": {
+      "tipo": "string",
+      "valores_permitidos": ["yes", "no"]
+    },
+    "famrel": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "freetime": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "goout": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "Dalc": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "Walc": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "health": {
+      "tipo": "integer",
+      "minimo": 1,
+      "maximo": 5
+    },
+    "absences": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 365
+    },
+    "G1": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 20
+    },
+    "G2": {
+      "tipo": "integer",
+      "minimo": 0,
+      "maximo": 20
+    }
+  },
+  "entrada_valida": {
+    "school": "GP",
+    "sex": "F",
+    "age": 18,
+    "address": "U",
+    "famsize": "GT3",
+    "Pstatus": "A",
+    "Medu": 4,
+    "Fedu": 4,
+    "Mjob": "at_home",
+    "Fjob": "teacher",
+    "reason": "course",
+    "guardian": "mother",
+    "traveltime": 2,
+    "studytime": 2,
+    "failures": 0,
+    "schoolsup": "yes",
+    "famsup": "no",
+    "paid": "no",
+    "activities": "no",
+    "nursery": "yes",
+    "higher": "yes",
+    "internet": "no",
+    "romantic": "no",
+    "famrel": 4,
+    "freetime": 3,
+    "goout": 4,
+    "Dalc": 1,
+    "Walc": 1,
+    "health": 3,
+    "absences": 6,
+    "G1": 5,
+    "G2": 6
+  },
+  "entrada_invalida": {
+    "school": "GP",
+    "sex": "F",
+    "age": "ERROR",
+    "address": "U",
+    "famsize": "GT3",
+    "Pstatus": "A",
+    "Medu": 4,
+    "Fedu": 4,
+    "Mjob": "at_home",
+    "Fjob": "teacher",
+    "reason": "course",
+    "guardian": "mother",
+    "traveltime": 2,
+    "studytime": 2,
+    "failures": 0,
+    "schoolsup": "yes",
+    "famsup": "no",
+    "paid": "no",
+    "activities": "no",
+    "nursery": "yes",
+    "higher": "yes",
+    "internet": "no",
+    "romantic": "no",
+    "famrel": 4,
+    "freetime": 3,
+    "goout": 4,
+    "Dalc": 1,
+    "Walc": 1,
+    "health": 3,
+    "absences": 6,
+    "G1": 5,
+    "G2": 6
+  }
+}
